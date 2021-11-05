@@ -10,5 +10,17 @@ def converte(dicionario, frase):
     return "".join(frase_morse)
  
 #Exercício 2:
+def contaPalavras(frase):
+  incidencia = {}
+
+  lista = frase.replace('?', '').replace('!', '').replace(',', '').strip().split(' ')
+
+  for i in range(len(lista)):
+    if lista[i].lower() in incidencia:
+      incidencia[lista[i].lower()] = incidencia[lista[i].lower()]+1
+    else:
+      incidencia[lista[i].lower()] = 1
+
+  return incidencia
 
 #Exercício 3:
